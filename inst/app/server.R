@@ -161,7 +161,7 @@ function(input, output, session) {
       dplyr::select(kode_provinsi,iso_code,prov_bps,values)
     data.for.table(df)
     datatable(df) %>%
-      formatRound('values', digits = 3)
+      DT::formatRound('values', digits = 3)
   })
 
   output$download_table <- downloadHandler(
@@ -301,10 +301,10 @@ function(input, output, session) {
                      searching = FALSE,
                      ordering = FALSE)
     ) %>%
-      formatStyle(0, target = 'row', fontWeight = 'bold') %>%
-      formatStyle(0, width = '50px') %>%
-      formatStyle(1, width = '175px') %>%
-      formatStyle(c(0,1),
+      DT::formatStyle(0, target = 'row', fontWeight = 'bold') %>%
+      DT::formatStyle(0, width = '50px') %>%
+      DT::formatStyle(1, width = '175px') %>%
+      DT::formatStyle(c(0,1),
                   `text-align` = 'right',
                   border = '1px solid #ddd')
   }, server = FALSE)
@@ -336,13 +336,13 @@ function(input, output, session) {
                      searching = FALSE,
                      ordering = FALSE)
     ) %>%
-      formatStyle(0, target = 'row', fontWeight = 'bold') %>%
-      formatStyle(0, width = '50px') %>%
-      formatStyle(1, width = '150px',
+      DT::formatStyle(0, target = 'row', fontWeight = 'bold') %>%
+      DT::formatStyle(0, width = '50px') %>%
+      DT::formatStyle(1, width = '150px',
                   background = styleColorBar(range(df$Jumlah, na.rm = TRUE), 'lightblue'),
                   backgroundColor = styleInterval(0, c('white', 'lightblue'))) %>%
-      formatRound(1, digits = 3) %>%
-      formatStyle(c(0,1),
+      DT::formatRound(1, digits = 3) %>%
+      DT::formatStyle(c(0,1),
                   `text-align` = 'right',
                   border = '1px solid #ddd')
 
@@ -365,13 +365,13 @@ function(input, output, session) {
                      searching = FALSE,
                      ordering = FALSE)
     ) %>%
-      formatStyle(0, target = 'row', fontWeight = 'bold') %>%
-      formatStyle(0, width = '50px') %>%
-      formatStyle(1, width = '150px',
+      DT::formatStyle(0, target = 'row', fontWeight = 'bold') %>%
+      DT::formatStyle(0, width = '50px') %>%
+      DT::formatStyle(1, width = '150px',
                   background = styleColorBar(range(df$Persen, na.rm = TRUE), 'lightblue'),
                   backgroundColor = styleInterval(0, c('white', 'lightblue'))) %>%
-      formatRound(1, digits = 3) %>%
-      formatStyle(c(0,1),
+      DT::formatRound(1, digits = 3) %>%
+      DT::formatStyle(c(0,1),
                   `text-align` = 'right',
                   border = '1px solid #ddd')
 
