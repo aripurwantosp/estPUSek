@@ -1,4 +1,4 @@
-utils::globalVariables("estPUSek.data.env")
+utils::globalVariables("estPUSek:::estPUSek.data.env")
 
 #' Menjalankan aplikasi estPUSek
 #'
@@ -23,7 +23,7 @@ load.data.by.ind <- function(indicator, age=NULL) {
   indicator <- as.numeric(indicator)
   func <- ind.fun(indicator)
   do.call('data', list(name = func, envir = estPUSek.data.env))
-  data <- estPUSek.data.env[[func]]
+  data <- estPUSek:::estPUSek.data.env[[func]]
   # do.call('data', list(name = func))
   # data <- .GlobalEnv[[func]]
 
@@ -53,9 +53,9 @@ data.rbind <- function(data, col, values){
   return(datar)
 }
 
-ind.settings <- function() attr(estPUSek.data.env$indicators, 'settings')
+ind.settings <- function() attr(estPUSek:::estPUSek.data.env$indicators, 'settings')
 ind.fun <- function(indicator) rownames(ind.settings())[indicator]
-ind.definition <- function(indicator) attr(estPUSek.data.env$indicators, 'definition')[indicator]
+ind.definition <- function(indicator) attr(estPUSek:::estPUSek.data.env$indicators, 'definition')[indicator]
 
 
 # Custom ----
