@@ -190,7 +190,7 @@ function(input, output, session) {
   })
 
   output$trends_table <- renderTable({
-    df <- data.rbind(trends_data(), 'tahun', 'values')
+    df <- estPUSek:::data.rbind(trends_data(), 'tahun', 'values')
     df
   })
 
@@ -215,7 +215,7 @@ function(input, output, session) {
 
   output$structure_table <- renderTable({
     if(sel.ind.has.struct()){
-      df <- data.rbind(struct_data(), 'umur', 'values')
+      df <- estPUSek:::data.rbind(struct_data(), 'umur', 'values')
       l <- length(df)
       colnames(df)[l] <- '80+'
       df
@@ -407,7 +407,7 @@ function(input, output, session) {
   })
 
   output$age1_table <- renderTable({
-    df <- data.rbind(data.age1(), 'Umur', 'Jumlah')
+    df <- estPUSek:::data.rbind(data.age1(), 'Umur', 'Jumlah')
     l <- length(df)
     colnames(df)[l] <- paste0(sel.oag(),'+')
     df
