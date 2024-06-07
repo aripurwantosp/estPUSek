@@ -18,7 +18,7 @@ function(input, output, session) {
   sel.prov <- reactive({as.integer(input$sel_prov)}) #selected province
 
   # indicator.fun <- reactive({ind.fun(sel.indicator())}) #selected indicator fun
-  data.env <- function() estPUSek.data.env #global data
+  data.env <- function() estPUSek:::estPUSek.data.env #global data
 
   ### load data ----
   indicator_data <- reactive({ #indicator data
@@ -102,7 +102,7 @@ function(input, output, session) {
     df <- indicator_data()
     df <- df[df$kode_provinsi != 0, ]
     df <- df[!is.na(df$values), ]
-    ref_code_prov <- estPUSek.data.env$prov_code[,c('kode_bps','prov_bps')]
+    ref_code_prov <- estPUSek:::estPUSek.data.env$prov_code[,c('kode_bps','prov_bps')]
     df$provinsi <- factor(df$kode_provinsi,
                           levels = ref_code_prov$kode_bps[-1],
                           labels = ref_code_prov$prov_bps[-1])
@@ -138,7 +138,7 @@ function(input, output, session) {
   output$map <- renderGvis({
     df <- data_by_year()
     df <- df[df$kode_provinsi != 0, ]
-    iso_code_prov <- estPUSek.data.env$prov_code[,c('kode_bps','iso_code')]
+    iso_code_prov <- estPUSek:::estPUSek.data.env$prov_code[,c('kode_bps','iso_code')]
     df <- dplyr::left_join(df, iso_code_prov, by=c('kode_provinsi'='kode_bps'))
     gvisGeoChart(df, locationvar='iso_code',
                  colorvar='values', chartid='map',
@@ -156,7 +156,7 @@ function(input, output, session) {
     if(exclude.id()){
       df <- df[df$kode_provinsi != 0, ]
     }
-    code_prov <- estPUSek.data.env$prov_code[,c('kode_bps','iso_code','prov_bps')]
+    code_prov <- estPUSek:::estPUSek.data.env$prov_code[,c('kode_bps','iso_code','prov_bps')]
     df <- dplyr::left_join(df, code_prov, by=c('kode_provinsi'='kode_bps')) %>%
       dplyr::select(kode_provinsi,iso_code,prov_bps,values)
     data.for.table(df)
@@ -233,7 +233,7 @@ function(input, output, session) {
   sel.oag <- reactive({as.integer(input$oag)}) #selected oag
   sel.method <- reactive({
     idx <- as.integer(input$interp_method)
-    names(estPUSek.data.env$list.interp.method[idx])
+    names(estPUSek:::estPUSek.data.env$list.interp.method[idx])
   })
 
   ### data ----
