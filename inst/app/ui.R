@@ -24,7 +24,7 @@ fluidPage(
         sidebarPanel(
           width = 4,
           selectInput('indicator', h5('Indikator:'),
-                      estPUSek.data.env$indicators),
+                      estPUSek:::estPUSek.data.env$indicators),
           fluidRow(column(4, offset = 1, uiOutput('age_sel'))),
           htmlOutput('indicator_desc'),
           hr(),
@@ -140,16 +140,16 @@ fluidPage(
         sidebarPanel(
           width = 3,
           selectInput("input_mode", h5("Mode input data:"),
-                      estPUSek.data.env$list.input.mode, selected = 1),
+                      estPUSek:::estPUSek.data.env$list.input.mode, selected = 1),
           conditionalPanel(condition = 'input.input_mode == 2',
                            fileInput('file_input',h5('Pilih file:'),
                                      accept = c('.csv','.xlsx','.xls'))),
           selectInput('oag',h5('Kelompok umur terbuka:'),
-                      estPUSek.data.env$list.oag, selected = 80),
+                      estPUSek:::estPUSek.data.env$list.oag, selected = 80),
 
           # hr(),
           # radioButtons("interp_method",h5("Metode:"),inline=TRUE,
-          #              estPUSek.data.env$list.interp.method, selected = 1),
+          #              estPUSek:::estPUSek.data.env$list.interp.method, selected = 1),
           fluidRow(
             column(3, actionButton('init_data','Init data',
                                    icon=icon('refresh'))),
