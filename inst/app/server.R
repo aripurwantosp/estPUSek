@@ -94,7 +94,7 @@ function(input, output, session) {
   })
 
   output$indicator_desc <- renderText({
-    paste0('<small>', ind.definition(sel.indicator()), '</small>')
+    paste0('<small>', estPUSek:::ind.definition(sel.indicator()), '</small>')
   })
 
   ## heat map ----
@@ -165,7 +165,7 @@ function(input, output, session) {
   })
 
   output$download_table <- downloadHandler(
-    filename <- function() {paste0(ind.fun(sel.indicator()),'_',sel.year(),'.csv') },
+    filename <- function() {paste0(estPUSek:::ind.fun(sel.indicator()),'_',sel.year(),'.csv') },
     content <- function(file) {
       tbl <- data.for.table()
       write.csv(tbl, file, row.names = FALSE)
