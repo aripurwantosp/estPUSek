@@ -160,7 +160,7 @@ function(input, output, session) {
     df <- dplyr::left_join(df, code_prov, by=c('kode_provinsi'='kode_bps')) %>%
       dplyr::select(kode_provinsi,iso_code,prov_bps,values)
     data.for.table(df)
-    datatable(df) %>%
+    DT::datatable(df) %>%
       DT::formatRound('values', digits = 3)
   })
 
@@ -287,7 +287,7 @@ function(input, output, session) {
   ### age5 input ----
   output$age5table <- DT::renderDT({
     df <- data.age5()
-    datatable(
+    DT::datatable(
       df,
       rownames = TRUE,
       selection = 'none',
@@ -323,7 +323,7 @@ function(input, output, session) {
   output$sap_table <- DT::renderDT({
     df <- data.sap() %>% dplyr::select(-Persen)
     df <- tibble::column_to_rownames(df,'Umur')
-    datatable(
+    DT::datatable(
       df,
       rownames = TRUE,
       selection = 'none',
@@ -339,8 +339,8 @@ function(input, output, session) {
       DT::formatStyle(0, target = 'row', fontWeight = 'bold') %>%
       DT::formatStyle(0, width = '50px') %>%
       DT::formatStyle(1, width = '150px',
-                  background = styleColorBar(range(df$Jumlah, na.rm = TRUE), 'lightblue'),
-                  backgroundColor = styleInterval(0, c('white', 'lightblue'))) %>%
+                  background = DT::styleColorBar(range(df$Jumlah, na.rm = TRUE), 'lightblue'),
+                  backgroundColor = DT::styleInterval(0, c('white', 'lightblue'))) %>%
       DT::formatRound(1, digits = 3) %>%
       DT::formatStyle(c(0,1),
                   `text-align` = 'right',
@@ -352,7 +352,7 @@ function(input, output, session) {
   output$sap_table2 <- DT::renderDT({
     df <- data.sap() %>% dplyr::select(-Jumlah)
     df <- tibble::column_to_rownames(df,'Umur')
-    datatable(
+    DT::datatable(
       df,
       rownames = TRUE,
       selection = 'none',
@@ -368,8 +368,8 @@ function(input, output, session) {
       DT::formatStyle(0, target = 'row', fontWeight = 'bold') %>%
       DT::formatStyle(0, width = '50px') %>%
       DT::formatStyle(1, width = '150px',
-                  background = styleColorBar(range(df$Persen, na.rm = TRUE), 'lightblue'),
-                  backgroundColor = styleInterval(0, c('white', 'lightblue'))) %>%
+                  background = DT::styleColorBar(range(df$Persen, na.rm = TRUE), 'lightblue'),
+                  backgroundColor = DT::styleInterval(0, c('white', 'lightblue'))) %>%
       DT::formatRound(1, digits = 3) %>%
       DT::formatStyle(c(0,1),
                   `text-align` = 'right',
