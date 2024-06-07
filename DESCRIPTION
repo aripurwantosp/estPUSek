@@ -1,0 +1,15 @@
+Package: estPUSek
+Title: Shiny Apps Estimasi Jumlah Penduduk Umur Sekolah dan Umur 1 Tahunan
+Version: 1.0
+Authors@R: 
+    person("Ari Purwanto Sarwo Prasojo", "ari.prasojo18@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "https://orcid.org/0000-0002-4862-5523"))
+Maintainer: Ari Purwanto Sarwo Prasojo <ari.prasojo18@gmail.com>
+Description: Aplikasi berbasis shiny untuk estimasi jumlah penduduk umur sekolah dan umur 1 tahunan dari jumlah penduduk umur 5 tahunan dengan menggunakan pendekatan koefisien sprague.
+Depends: R (>= 3.0.0)
+License: GPL-3
+lazyData: true
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports: shiny (>= 0.13.0), shinythemes, shinydashboard, shinyjs, dplyr, tibble, magrittr, ggplot2, googleVis, DT

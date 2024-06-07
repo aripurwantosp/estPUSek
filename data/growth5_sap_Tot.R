@@ -1,0 +1,1 @@
+growth5_sap_Tot <- readRDS(file="growth5_sap_Tot.rds")

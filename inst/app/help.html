@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Bantuan estPUSek</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<h3>Deskripsi</h3>
+
+<p>Aplikasi berbasis shiny untuk estimasi jumlah penduduk umur sekolah dan umur 1 tahunan dari jumlah penduduk umur 5 tahunan dengan menggunakan pendekatan koefisien sprague. Aplikasi ini juga menyajikan dan memfasilitasi eksplorasi hasil estimasi penduduk umur sekolah dan 1 tahunan berdasarkan Hasil Proyeksi Penduduk Indonesia 2020-2050 Berdasarkan Hasil Sensus Penduduk 2020.
+</p>
+
+
+<h3>Data</h3>
+<p>Data yang digunakan untuk eksplorasi hasil proyeksi adalah hasil proyeksi penduduk Indonesia 2020-2050 hasil Sensus Penduduk 2020 (SP 2020) (Kementerian PPN/Bappenas, et al., 2023). Sumber tersebut merupakan data ofisial proyeksi penduduk Indonesia dalam jumlah umur 5 tahunan.</p>
+
+<h3>Metode</h3>
+<p>Pemecahan jumlah penduduk kelompok umur 5 tahunan menjadi jumlah penduduk 1 tahunan menggunakan koefisien Sprague.
+</p>
+<p>Pengelompokkan umur sekolah:
+   (7-12 tahun) umur sekolah dasar;
+   (13-15 tahun) umur sekolah menengah pertama;
+   (16-18 tahun) umur sekolah menengah;
+   (19-23 tahun) umur perguruan tinggi. </p>
+
+<h3>Navigasi</h3>
+
+<h4>A. Hasil Proyeksi</h4>
+
+<p>Halaman hasil proyeksi menyajikan eksplorasi hasil estimasi penduduk umur sekolah dan 1 tahunan berdasarkan hasil Proyeksi Penduduk Indonesia 2020-2050 (berdasarkan hasil SP 2020).
+</p>
+<p>Pada sisi kiri halaman (sidebar) terdapat pilihan indikator. untuk beberapa indikator juga dapat dipilih berdasarkan kelompok umur pada pilihan Umur. Menu tahun untuk memfilter tahun yang dikehendaki.
+</p>
+<p>Terdapat 4 menu utama untuk menyajikan eksplorasi, yakn:</p>
+<strong>(1) Heat map</strong>
+<p>Menyajikan visualisasi indikator antar provinsi dan antar tahun
+</p>
+<strong>(2) Map</strong>
+<p>Menyajikan visualisasi indikator antar wilayah untuk tahun tertentu dengan menggunakan peta. Menu ini dapat digunakan jika Anda terhubung dengan internet.
+</p>
+<strong>(3) Tabel</strong>
+<p>Menyajikan nilai-nilai indikator antar wilayah untuk tahun tertentu dengan menggunakan tabel. Anda dapat menyortir tabel secara interaktif dengan menekan tanda di samping nama kolom. Anda juga dapat mengunduh data dalam tabel dengan menekan link 'download'.
+</p>
+<strong>(4) Trends & Struktur</strong>
+<p>Menyajikan visualisasi trend indikator antar tahun untuk suatu provinsi dan jumlah penduduk umur 1 tahunan di tahun tertentu.
+</p>
+
+<h4>B. Custom</h4>
+
+<p>Anda dapat melakukan estimasi jumlah penduduk umur sekolah dan umur 1 tahunan terhadap data jumlah penduduk 5 tahunan yang Anda miliki pada tab atau halaman custom.
+</p>
+<p>Tahapan yang Anda lakukan adalah sebagai berikut: </p>
+<strong>(1) Memilih metode input data</strong>
+<p>Terdapat dua pilihan metode input data, yakni secara manual atau input file. Jenis file yang didukung untuk pilihan input file adalah: .csv (semicolon ; delimiter), .xls, dan .xlsx (excel). Format input data terdiri dari dua kolom, yakni Umur dan Jumlah. Kolom umur berisikan label kelompok umur 5 tahunan dan Kolom Jumlah. Format desimal untuk jenis file .csv menggunakan titik. Berikut ini adalah contoh untuk jenis .csv dan .xls atau .xlsx:
+</p>
+<img src="images/csv_example.jpg" alt="Contoh format input file .csv">
+<br></br>
+<img src="images/xlsx_xls_example.jpg" alt="Contoh format input file .xls dan .xlsx">
+<br>
+<strong>(2) Memilih kelompok umur terbuka</strong>
+<p>Kelompok umur terbuka merupakan batas atas kelompok umur pada dataset yang digunakan, misalnya kelompok umur 80 tahun ke atas (80+). Jika menggunakan metode input data dengan input file, pastikan kelompok umur terbuka sesuai dengan file yang digunakan. Jika Anda menggunakan metode input data manual, pilih sesuai dengan yang akan Anda input.</p>
+<strong>(3) Inisialisasi data</strong>
+<p>Inisialisasi data dilakukan dengan menekan tombol Init data. Jika Anda menggunakan metode input data dengan input file, aplikasi akan membaca dan menampilkan data pada kolom Input umur 5 tahunan. Kolom kosong akan muncul jika Anda menggunakan metode input data secara manual.</p>
+<strong>(4) Estimasi</strong>
+<p>Estimasi kelompok umur sekolah dan umur 1 tahunan akan diproses dengan menekan tombol Estimasi. Output yang dihasilkan adalah tabel jumlah dan persentase penduduk usia sekolah terhadap jumlah total penduduk, serta struktur umur 1 tahunan.
+</p>
+<p>Hasil estimasi dapat didownload dalam bentuk file .csv dengan menekan link 'Eskpor umur sekolah' atau 'Ekspor umur 1 tahunan'.</p>
+
+
+<h3>Catatan</h3>
+estPUSek dapat diakses secara online dan melalui perangkat lunak R dengan menginstall package melalui github.
+
+
+<h3>Maintainer</h3>
+<p>Ari Purwanto Sarwo Prasojo, Kelompok Riset Population Data Science, Pusat Riset Kependudukan, Badan Riset dan Inovasi Nasional (BRIN).</p>
+
+<h3>Acknowledgments</h3>
+<p>Ide dan kode desain layout aplikasi mengadaptasi paket (package) R <a href='https://CRAN.R-project.org/package=wppExplorer'>wppExplorer</a> . Terima kasih kepada author/pengembang paket wppExplorer.
+</p>
+
+<h3>Referensi</h3>
+<p>Kementerian PPN/Bappenas, Badan Pusat Statistik, BKKBN, Kementerian Kesehatan, & UNFPA. (2023). Proyeksi Penduduk Indonesia 2020-2050: Hasil Sensus Penduduk 2020. BPS.
+</p>
+<p>Siegel, J. S., Swanson, D. A., & Shryock, H. S. (Eds.). (2004). The methods and materials of demography (2nd ed). Elsevier/Academic Press.
+</p>
+<p>Sprague, T. B. (1880). Explanation ov a New Formula for Interpolation. Journal of the Institute of Actuaries and Assurance Magazine, 22(4), 270–285.
+</p>
+
+
+
+<hr /><div style="text-align: center;">[Package <em>estPUSek</em> versi 1.0]</div>
+</body>
+</html>
+
