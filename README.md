@@ -26,10 +26,48 @@ Aplikasi terdiri dari 3 halaman utama, yakni: Hasil Proyeksi, Custom, dan Bantua
 Halaman hasil proyeksi menyajikan eksplorasi hasil estimasi penduduk umur sekolah dan 1 tahunan berdasarkan hasil Proyeksi Penduduk Indonesia 2020-2050 (berdasarkan hasil SP 2020).
 
 <img src="https://github.com/aripurwantosp/estPUSek/blob/main/estPUSek_1.PNG" align="left"/>
+<br></br>
 
+Pada sisi kiri halaman (sidebar) terdapat pilihan indikator. Beberapa indikator juga dapat dipilih berdasarkan kelompok umur pada pilihan Umur. Menu tahun untuk memfilter tahun yang dikehendaki.
 
+Terdapat 4 menu utama untuk menyajikan eksplorasi, yakni:
 
+<strong>(1) Heat map</strong>
+<p>Menyajikan visualisasi indikator antar provinsi dan antar tahun
+</p>
+<strong>(2) Map</strong>
+<p>Menyajikan visualisasi indikator antar wilayah untuk tahun tertentu dengan menggunakan peta. Menu ini dapat digunakan jika Anda terhubung dengan internet.
+</p>
+<strong>(3) Tabel</strong>
+<p>Menyajikan nilai-nilai indikator antar wilayah untuk tahun tertentu dengan menggunakan tabel. Anda dapat menyortir tabel secara interaktif dengan menekan tanda di samping nama kolom. Anda juga dapat mengunduh data dalam tabel dengan menekan link 'download'.
+</p>
+<strong>(4) Trends & Struktur</strong>
+<p>Menyajikan visualisasi trend indikator antar tahun untuk suatu provinsi dan jumlah penduduk umur 1 tahunan di tahun tertentu.
+</p>
 
+### B. Custom
+Anda dapat melakukan estimasi jumlah penduduk umur sekolah dan umur 1 tahunan terhadap data jumlah penduduk 5 tahunan yang Anda miliki pada tab atau halaman custom.
+
+<img src="https://github.com/aripurwantosp/estPUSek/blob/main/estPUSek_2.PNG" align="left"/>
+<br></br>
+
+<p>Tahapan yang Anda lakukan adalah sebagai berikut: </p>
+<strong>(1) Memilih metode input data</strong>
+<p>Terdapat dua pilihan metode input data, yakni secara manual atau input file. Jenis file yang didukung untuk pilihan input file adalah: .csv (semicolon ; delimiter), .xls, dan .xlsx (excel). Format input data terdiri dari dua kolom, yakni Umur dan Jumlah. Kolom umur berisikan label kelompok umur 5 tahunan dan Kolom Jumlah. Format desimal untuk jenis file .csv menggunakan titik.
+<strong>(2) Memilih kelompok umur terbuka</strong>
+<p>Kelompok umur terbuka merupakan batas atas kelompok umur pada dataset yang digunakan, misalnya kelompok umur 80 tahun ke atas (80+). Jika menggunakan metode input data dengan input file, pastikan kelompok umur terbuka sesuai dengan file yang digunakan. Jika Anda menggunakan metode input data manual, pilih sesuai dengan yang akan Anda input.</p>
+<strong>(3) Inisialisasi data</strong>
+<p>Inisialisasi data dilakukan dengan menekan tombol Init data. Jika Anda menggunakan metode input data dengan input file, aplikasi akan membaca dan menampilkan data pada kolom Input umur 5 tahunan. Kolom kosong akan muncul jika Anda menggunakan metode input data secara manual.</p>
+<strong>(4) Estimasi</strong>
+<p>Estimasi kelompok umur sekolah dan umur 1 tahunan akan diproses dengan menekan tombol Estimasi. Output yang dihasilkan adalah tabel jumlah dan persentase penduduk usia sekolah terhadap jumlah total penduduk, serta struktur umur 1 tahunan.
+</p>
+<p>Hasil estimasi dapat didownload dalam bentuk file .csv dengan menekan link 'Eskpor umur sekolah' atau 'Ekspor umur 1 tahunan'.</p>
+
+### C. Bantuan
+Halaman bantuan
+
+<img src="https://github.com/aripurwantosp/estPUSek/blob/main/estPUSek_2.PNG" align="left"/>
+<br></br>
 
 ## Sitasi
 Untuk mensitasi paket `estPUSek` dalam publikasi dapat digunakan format berikut:
