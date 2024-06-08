@@ -20,12 +20,16 @@ Aplikasi dapat dijalankan dengan perintah seperti berikut:
 library(estPUSek)
 run.estPUSek()
 ```
+Aplikasi terdiri dari 3 halaman utama, yakni: Hasil Proyeksi, Custom, dan Bantuan. 
 
-[<img src="https://github.com/aripurwantosp/estPUSek/blob/main/estPUSek_1.PNG" align="left"/>]
+### A. Hasil Proyeksi
+Halaman hasil proyeksi menyajikan eksplorasi hasil estimasi penduduk umur sekolah dan 1 tahunan berdasarkan hasil Proyeksi Penduduk Indonesia 2020-2050 (berdasarkan hasil SP 2020).
 
-[<img src="estPUSek_2.png" align="left"/>]
+<img src="https://github.com/aripurwantosp/estPUSek/blob/main/estPUSek_1.PNG" align="left"/>
 
-[<img src="estPUSek_3.png" align="left"/>]
+
+
+
 
 ## Sitasi
 Untuk mensitasi paket `estPUSek` dalam publikasi dapat digunakan format berikut:
