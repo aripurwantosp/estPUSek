@@ -5,7 +5,7 @@
 `estPUSek` juga menyediakan hasil estimasi penduduk umur sekolah dan 1 tahunan dari hasil proyeksi penduduk Indonesia 2020-2045 berdasarkan hasil Sensus Penduduk (SP) 2020.
 
 
-### Menjalankan est PUSek
+## Menjalankan est PUSek
 `estPUSek` dapat dijalankan melalui perangkat lunak R dengan melakukan instalasi paket terlebih dahulu sebagai berikut:
 
 ```r
@@ -21,19 +21,19 @@ library(estPUSek)
 run.estPUSek()
 ```
 
-[<img src="estPUSek_1.png" align="left" width=100 />]
+<img src="estPUSek_1.png" align="left"/>
 
-[<img src="estPUSek_2.png" align="left" width=100 />]
+<img src="estPUSek_2.png" align="left"/>
 
-[<img src="estPUSek_3.png" align="left" width=100 />]
+<img src="estPUSek_3.png" align="left"/>
 
-### Sitasi
+## Sitasi
 Untuk mensitasi paket `estPUSek` dalam publikasi dapat digunakan format berikut:
 
 Prasojo APS (2024). estPUSek: Aplikasi Berbasis Shiny untuk Estimasi
   Jumlah Penduduk Umur Sekolah dan Umur 1 Tahunan. URL: https://github.com/aripurwantosp/estPUSek.
 
-### R session info untuk versi paket-paket terkait
+## R session info untuk versi paket-paket terkait
 
 ```r
 > sessionInfo()
