@@ -21,11 +21,11 @@ library(estPUSek)
 run.estPUSek()
 ```
 
-<img src="estPUSek_1.png" align="left"/>
+[<img src="https://github.com/aripurwantosp/estPUSek/blob/main/estPUSek_1.PNG" align="left"/>]
 
-<img src="estPUSek_2.png" align="left"/>
+[<img src="estPUSek_2.png" align="left"/>]
 
-<img src="estPUSek_3.png" align="left"/>
+[<img src="estPUSek_3.png" align="left"/>]
 
 ## Sitasi
 Untuk mensitasi paket `estPUSek` dalam publikasi dapat digunakan format berikut:
