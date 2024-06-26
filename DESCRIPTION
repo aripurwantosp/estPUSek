@@ -1,6 +1,7 @@
 Package: estPUSek
 Title: Aplikasi Berbasis Shiny untuk Estimasi Jumlah Penduduk Umur Sekolah dan Umur 1 Tahunan
 Version: 1.0
+Date: 2024-06-17
 Author: Ari Purwanto Sarwo Prasojo <ari.prasojo18@gmail.com>
 Maintainer: Ari Purwanto Sarwo Prasojo <ari.prasojo18@gmail.com>
 Description: Aplikasi berbasis shiny untuk estimasi jumlah penduduk umur sekolah dan umur 1 tahunan dari jumlah penduduk umur 5 tahunan dengan menggunakan pendekatan koefisien sprague.
