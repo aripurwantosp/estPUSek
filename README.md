@@ -1,7 +1,5 @@
 # estPUSek: Aplikasi berbasis shiny untuk estimasi jumlah penduduk umur sekolah dan umur 1 tahunan.
 
-[![Github All Releases](https://img.shields.io/github/downloads/aripurwantosp/estPUSek/total.svg)]()
-
 `estPUSek` adalah sebuah *library* atau paket R (R package) yang berisikan aplikasi berbasis shiny untuk estimasi jumlah penduduk umur sekolah dan umur 1 tahunan dari jumlah penduduk umur 5 tahunan dengan menggunakan pendekatan koefisien sprague.
 
 
