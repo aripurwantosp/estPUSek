@@ -2,7 +2,7 @@
 % Please edit documentation in R/estPUSek.R
 \name{run.estPUSek}
 \alias{run.estPUSek}
-\title{Menjalankan aplikasi estPUSek}
+\title{Menjalankan aplikasi estPUSek GUI}
 \usage{
 run.estPUSek(host = NULL, ...)
 }

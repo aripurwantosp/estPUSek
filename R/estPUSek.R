@@ -1,6 +1,6 @@
 utils::globalVariables("estPUSek.data.env")
 
-#' Menjalankan aplikasi estPUSek
+#' Menjalankan aplikasi estPUSek GUI
 #'
 #' @description Menjalankan estPUSek, aplikasi berbasis shiny untuk estimasi jumlah penduduk usia sekolah dan umur 1 tahunan.
 #' @details Deskripsi fitur-fitur tersedia di halaman bantuan aplikasi.

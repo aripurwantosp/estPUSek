@@ -6,7 +6,7 @@
 
 \docType{data}
 \title{
-Estimasi Perubahan (Pertumbuhan) Tahunan Penduduk Umur Sekolah
+Estimasi Perubahan (Pertumbuhan) 5 Tahunan Penduduk Umur Sekolah
 }
 \description{
 Perubahan (pertumbuhan) 5 tahunan penduduk umur sekolah berdasarkan Hasil Proyeksi Penduduk Indonesia 2020-2050 berdasarkan hasil Sensus Penduduk (SP) 2020. Total (\code{growth5_sap_Tot}), Laki-laki (\code{growth5_sap_L}), Perempuan (\code{growth5_sap_P}). Dihitung dengan (P_t-P_{t-5})/P_{t-5}.
